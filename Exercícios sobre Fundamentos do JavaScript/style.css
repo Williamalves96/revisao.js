@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        'cabecalho cabecalho'
+        'lado-esquerdo principal'
+        'rodape rodape';
+
+    grid-template-rows: 64px 1fr 64px;
+    grid-template-columns: 256px 1fr;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: rgb(26, 40, 236);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+button:hover {
+    opacity: 1.5;
+}
+
+header {
+    grid-area: cabecalho;
+    background-color: rgb(26, 40, 236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+}
+
+aside {
+    grid-area: lado-esquerdo;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+
+main {
+    grid-area: principal;
+    padding: 24px;
+}
+
+footer {
+    grid-area: rodape;
+    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
